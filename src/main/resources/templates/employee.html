@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Welcome Employee <a href="/addEmployee"> Add Employee </a> <br>
+<a href="/">Home</a>
+<table border="2px">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>suname</th>
+        <th>email</th>
+        <th>phoneNumber</th>
+        <th>salary</th>
+        <th>position</th>
+        <th>company name</th>
+
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.surname}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.phoneNumber}"></td>
+        <td th:text="${employee.salary}"></td>
+        <td th:text="${employee.position}"></td>
+        <td th:text="${employee.company.name}"></td>
+    </tr>
+
+</table>
+</body>
+</body>
+</html>
