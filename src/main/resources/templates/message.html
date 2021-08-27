@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Welcome
+
+<form action="/addMessage" method="post">
+
+    From Employee:<select name="formId">
+    <option th:each="emloyee: ${employeesMessage}" th:text="${emloyee.name}"  th:value="${emloyee.id}"></option>
+                  </select>
+    To Employee:<select name="toId">
+    <option th:each="emloyee: ${employeesMessage}" th:text="${emloyee.name}"  th:value="${emloyee.id}"></option>
+</select>
+    <input type="text" name="message" placeholder="message">
+    <input type="submit" value="send message">
+</form>
+
+<table border="2px">
+    <tr>
+        <th>My message</th>
+    </tr>
+
+    <tr th:each="currentMessage:${allmessage}">
+        <td th:text="${currentMessage.message}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -15,12 +15,15 @@ Add Employee Page <a href="/employee">Emloyee</a>
     <input type="text" name="phoneNumber" placeholder="phoneNumber">
     <input type="text" name="salary" placeholder="salary">
     <input type="text" name="position" placeholder="position">
+    <input type="password" name="password" placeholder="password">
     Company:<select name="company.id">
     <option th:each="company: ${companys}" th:text="${company.name}" th:value="${company.id}"></option>
             </select>
     <input type="submit" value="Send">
 
 </form>
+
+
 
 </body>
 </html>

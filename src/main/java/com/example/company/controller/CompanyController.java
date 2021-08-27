@@ -1,8 +1,7 @@
 package com.example.company.controller;
 
-import com.example.company.model.Employee;
-import com.example.company.repository.CompanyRepository;
 import com.example.company.model.Company;
+import com.example.company.repository.CompanyRepository;
 import com.example.company.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class CompanyController {

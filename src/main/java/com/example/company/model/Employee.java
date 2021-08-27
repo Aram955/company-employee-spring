@@ -23,6 +23,7 @@ public class Employee {
     private String  phoneNumber;
     private int salary;
     private String position;
-    @ManyToOne(fetch = FetchType.EAGER)
+    private String password;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     private Company company;
 }
