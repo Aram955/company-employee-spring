@@ -1,6 +1,5 @@
 package com.example.company.model;
 
-import  com.example.company.model.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,8 +25,8 @@ public class Message  {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "to_id")
     private Employee  toID;
-    @JoinColumn(name = "message")
-    private String message;
+    @JoinColumn(name = "letter")
+    private String letter;
 
 
 

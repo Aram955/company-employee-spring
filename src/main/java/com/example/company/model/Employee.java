@@ -24,6 +24,8 @@ public class Employee {
     private int salary;
     private String position;
     private String password;
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @Enumerated(value = EnumType.STRING)
+    private EmployeeType employeeType;
+    @ManyToOne(fetch = FetchType.EAGER)
     private Company company;
 }

@@ -16,6 +16,7 @@ Welcome Employee <a href="/addEmployee"> Add Employee </a> <br>
         <th>phoneNumber</th>
         <th>salary</th>
         <th>position</th>
+        <th>employeeType</th>
         <th>company name</th>
 
     </tr>
@@ -27,10 +28,13 @@ Welcome Employee <a href="/addEmployee"> Add Employee </a> <br>
         <td th:text="${employee.phoneNumber}"></td>
         <td th:text="${employee.salary}"></td>
         <td th:text="${employee.position}"></td>
+        <td th:text="${employee.employeeType}"></td>
         <td th:text="${employee.company.name}"></td>
     </tr>
 
 </table>
+<a href="/showMessages">View messages</a>
 <a href="/message">send Message</a>
+
 </body>
 </html>

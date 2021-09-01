@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+View all messages
+<table border="2px">
+    <tr>
+        <th>From</th>
+        <th>Messages</th>
+    </tr>
+    <tr th:each="message:${messages}" >
+        <td th:text="${message.formID.name}"></td>
+        <td th:text="${message.letter}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
